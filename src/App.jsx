@@ -5,38 +5,29 @@ import heroImg from './assets/hero.png'
 import './App.css'
 
 const scores = [
-  { 이름: "홍길동", 국어: 90, 수학: 80, 과학: 70, 영어: 60},
-  { 이름: "전우치", 국어: 90, 수학: 80, 과학: 70, 영어: 60},
-  { 이름: "이방원", 국어: 90, 수학: 80, 과학: 70, 영어: 60},
-  { 이름: "허준", 국어: 90, 수학: 80, 과학: 70, 영어: 60},
-]
-
-const sousrces = [0, 1, 2, 3]
-tmp=[]
-for(let item of scores){
-  tmp.push(item*2)
-}
-
-sousrces.map(item=>(item*2))
+  { 이름: "jojo", 국어: 90, 수학: 80, 과학: 70, 영어: 60},
+  { 이름: "taran", 국어: 90, 수학: 80, 과학: 70, 영어: 60},
+  { 이름: "stand", 국어: 90, 수학: 80, 과학: 70, 영어: 60},
+  { 이름: "rush", 국어: 90, 수학: 80, 과학: 70, 영어: 60} ]
 
 function App() { 
   return (
     <table>
      <tr>
-      <th>이름</th>
-      <th>국어</th>
-      <th>수학</th>
-      <th>과학</th>
-      <th>영어</th>
+      {
+        Object.keys(scores[0]).map(key=>(
+          <th>{key}</th>
+        ))
+      }
      </tr>
-     {[0,1,2,3].map(idx=>
+     {scores.map(item=>
           (
             <tr>
-              <td>{scores[idx].이름}</td>
-              <td>{scores[idx].국어}</td>
-              <td>{scores[idx].수학}</td>
-              <td>{scores[idx].과학}</td>
-              <td>{scores[idx].영어}</td>
+              {
+                Object.values(item).map(value=>(
+                  <td>{value}</td>
+                ))
+              }
             </tr>
           )
         )
