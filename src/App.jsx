@@ -11,6 +11,14 @@ const scores = [
   { 이름: "허준", 국어: 90, 수학: 80, 과학: 70, 영어: 60},
 ]
 
+const sousrces = [0, 1, 2, 3]
+tmp=[]
+for(let item of scores){
+  tmp.push(item*2)
+}
+
+sousrces.map(item=>(item*2))
+
 function App() { 
   return (
     <table>
